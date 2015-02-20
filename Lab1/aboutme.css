@@ -1,0 +1,52 @@
+body{
+	font-family: Arial, "Times New Roman";
+	background-color: gray;
+	color: white;
+}
+strong {
+	color:yellow;
+	background-color: purple;
+}
+
+a:link {
+	text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: pink;
+    text-decoration: underline;
+}
+
+a:active {
+    color: blue;
+}
+
+p:first-letter {
+	font-size: 200%;
+	font-weight: bold;
+}
+dt{
+	color:yellow;
+}
+
+ol.reverse{
+ 	list-style: none;
+ 	counter-reset: reverse 4;
+ }
+ol.reverse > li:before {
+	content: counter(reverse) '.';
+	display: block;
+	position: absolute;
+	left: -30px;
+	text-align: right;
+	width: 20px;
+}
+ol.reverse > li {
+	counter-increment: reverse -1;
+	position: relative;
+}

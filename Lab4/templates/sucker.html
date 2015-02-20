@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Buy Your Way to a Better Education!</title>
+	<link rel="stylesheet" href="{{ static_url("buyagrade.css") }}" type="text/css">
+</head>
+<body>
+	<h1>Thanks, sucker!</h1>
+	<p>Your infomation has been recorder.</p>
+	<dl>
+		<dt>Name</dt>
+		<dd>{{ name }}</dd>
+
+		<dt>Section</dt>
+		<dd>{{ section }}</dd>
+
+		<dt>Credit Card</dt>
+		<dd>{{ id }}({{ type }})</dd>
+	</dl>
+	<pre>
+		{% for record in records %}
+		{{ record }}
+		{% end for %}
+	</pre>
+</body>
+</html>

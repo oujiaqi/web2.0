@@ -1,0 +1,4 @@
+admin,123456
+oujiaqi,oujiaqi
+121212,121212
+oujaiqii,oujaiqii

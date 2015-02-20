@@ -1,0 +1,127 @@
+* {
+	font-size: 12pt;
+	font-family: "Verdana", "Geneva", sans-serif;
+}
+
+body {
+	background-color: white;
+	padding: 1em;
+}
+
+#bannerarea {
+	margin-bottom: 2em;
+}
+
+div {
+	margin-top: 0.5em;
+}
+
+.info {
+	padding-left: 160px;
+}
+
+#main {
+	overflow: hidden;
+	width: 32em;
+}
+
+.match {
+	margin-bottom: 3em;
+}
+
+.name {
+	background-color: #E0E0FF;
+	clear: left;
+}
+
+.name img {
+	width: 150px;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 3em;
+}
+
+#seeking {
+	margin-top: 2em;
+}
+
+#w3c {
+	clear: both;
+}
+
+#w3c img {
+	border-width: 0px;
+}
+
+.category {
+	display: block;
+}
+#na{
+	padding-right: 80pt;
+}
+#ge{
+	padding-right: 66pt;
+}
+#ge_{
+	padding-right: 60pt;
+}
+#ag{
+	padding-right: 89pt;
+}
+#ag_{
+	padding-right: 78pt;
+}
+#ty{
+	padding-right: 19pt;
+}
+#ty_{
+	padding-right:74pt;
+}
+#fa{
+	padding-right: 65pt;
+}
+#fa_{
+	padding-right: 81pt;
+}
+#ra_{
+	padding-right: 65pt;
+}
+#se{
+	padding-right: 62pt;
+}
+#be{
+	padding-right: 30pt;
+}
+fieldset{
+	border:solid #C8C8C8 2px;
+	background-color: #E0E0FF;
+	border-right-color: black;
+	border-bottom-color:black;
+}
+.oo{
+	border:solid #C8C8C8 2px;
+	border-right-color: black;
+	border-bottom-color:black;
+}
+
+input[type="submit"] {
+    font-size: 120%;
+    background-color: #FFAAAA;
+    font-weight: bold;
+    margin: 0.5em;
+}
+input[type="text"] {
+    border-style: solid;
+    border-width: 2px;
+    border-right-color: gray;
+    border-bottom-color: gray;
+}
+legend {
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-style: solid;
+    border-top-color: gray;
+    border-left-color: gray;
+    padding: 0.2em;
+}

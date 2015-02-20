@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>NerdLuv</title>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<link href="heart.gif" type="image/gif" rel="shortcut icon" />
+		<link href="{{static_url("css/nerdluv.css")}}" type="text/css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div id="main">
+			<div id="bannerarea">
+				<img src="{{static_url("images/nerdluv.png")}}" alt="banner logo" /> <br />
+				where meek geeks meet
+			</div>
+
+			{% if succeed == False %}
+			<div id="wrong">
+				<p>{{ error_message }}</p>
+				<a href="http://localhost:8000">Try again?</a>
+			</div>
+			{% end if %}
+
+			{% if succeed %}
+			<div id="matches">
+				<h1>Matches for {{user.name}}</h1>
+
+				{% for person in persons %}
+				<div class="match">
+					<p class="name">
+						<img src="{{ static_url("images/"+person.picture) }}" alt="{{ person.name }}" />
+						{{ person.name }} 
+					</p>
+
+					<p class="info">
+						<strong id="ge_">gender:</strong>  {{ person.gender }} <br />
+						<strong id="ag_">age:</strong>     {{ person.age }} <br />
+						<strong id="ty_">type:</strong>    {{ person.Type }} <br />
+						<strong id="fa_">OS:</strong>      {{ person.Os }} <br />
+						<strong id="ra_">rating:</strong>  {{ person.rating }}
+					</p>
+				</div>
+				{% end for %}
+			</div>
+			{% end if %}
+		</div>
+		
+		<p>
+			Results and page (C) Copyright 2009 NerdLuv Inc.
+		</p>
+
+		<div id="w3c">
+			<a href="http://validator.w3.org/check/referer">
+				<img src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" /></a>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+				<img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS" /></a>
+		</div>
+	</body>
+</html>

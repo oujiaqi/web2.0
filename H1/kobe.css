@@ -1,0 +1,89 @@
+a {
+	color: rgb(244,222,41);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color:rgb(244,133,100);
+}
+
+blockquote {
+	font-style: italic;
+}
+
+body {
+	font-family: "Georgia";
+	padding:5px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top:10px;
+	background-image:url("./images/beijing.jpg"); 
+}
+
+
+#head{
+	font-weight: bolder;
+	color:rgb(244,222,41);
+	font-family: Georgia, Garamond，"Century Gothic", Verdana;
+	padding: 0px;
+	text-align: left;
+	font-size: 14pt;
+	overflow: hidden;
+}
+#head img{
+	float:right;
+	clear:right;
+}
+img {
+	border-style: none;
+	padding: 5px;
+}
+
+ul {
+	padding-left: 20px;
+	
+}
+
+.main{
+	padding:30px;
+	background-color:rgb(90,13,67);
+	margin-bottom: 30px;
+}
+
+.part{
+	background-color: rgb(179,197,135);
+	overflow: hidden;
+	margin-top: 10px;
+	margin-left: 130pt;
+	padding:5px;
+	color:rgb(244,13,100);
+	font-weight: bold;
+}
+.part img{
+	float:right;
+}
+.date{
+	border-bottom:dashed 2px rgb(244,222,41);
+}
+.Index{
+	color:rgb(244,222,41);
+	float: left;
+	clear:left;
+	margin-top: 10pt;
+	width:155px;
+	height:330px;
+	background-color: rgb(175,18,88);
+}
+.link{
+	color:red;
+	font-weight: bold;
+	font-size: 15pt;
+}
+.kobe{
+	float:left;
+}
+h3{
+	text-align: center;
+	color: red;
+}

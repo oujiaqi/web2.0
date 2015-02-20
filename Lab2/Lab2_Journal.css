@@ -1,0 +1,81 @@
+a {
+	color: #245F5F;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color:#008B8B;
+}
+
+blockquote {
+	font-style: italic;
+}
+
+body {
+	font-family: "Georgia";
+	color: #009097;
+	padding:5px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top:10px;
+	background-image:url("./images/background.gif"); 
+}
+
+
+h1, h2 {
+	font-weight: normal;
+	font-family: "Century Gothic";
+	margin: 3px;
+	padding: 0px;
+}
+
+img {
+	border-style: none;
+	padding: 5px;
+}
+
+#head{
+	text-align: right;
+	background-color: #A8F0F0;
+}
+#head h2{
+	font-size:14pt;
+}
+.main{
+	padding:10px;
+	background-color:white;
+	margin-bottom: 15px;
+}
+
+.part{
+	border:solid 4px #C2E9E9;
+	background-color: #E8FBFB;
+	overflow: hidden;
+	margin-top: 10px;
+	margin-left: 130pt;
+	padding:5px;
+}
+.part img{
+	float:right;
+}
+.date{
+	border-bottom:dashed 2px #009097;
+}
+.friend{
+	float: left;
+	border: solid 5px #008B8B;
+	clear:left;
+	margin-top: 10pt;
+	width:155px;
+	height:150px;
+	background-color: #A8F0F0;
+}
+
+.friend ul {
+	padding-left: 45px;
+}
+
+.kobe{
+	float:left;
+}

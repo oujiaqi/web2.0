@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="short icon" href="{{static_url("images/rotten.gif")}}">
+	<title>{{ movie.name }}</title>
+	<link rel="stylesheet" href="{{static_url("movie.css")}}">
+</head>
+<body>
+	<div id="headpic">
+		<img src="{{static_url("images/banner.png")}}" alt="Rancid Tomatoes">
+	</div>
+
+	<h1 id="head">{{ movie.name }} ({{ movie.year }})</h1>
+
+	<div class="main">
+	<div id="mainright">
+		<img src="{{static_url(poster)}}" alt="general overview">
+
+	<dl>
+		{% for one in movie.view %}
+			<dt>{{ one[0] }}</dt>
+			<dd>{{ one[1] }}</dd>
+		{% end for %}
+
+		</dl>
+		</div>
+
+		<div id="headhead">
+			<img src="{{static_url( movie.rel )}}" alt="Rotten">
+			<span class="titlebignum">{{ movie.review }}%</span> <span class="titlesmallnum">({{ movie.number }} reviews total)</span>
+		</div>
+
+		<div id="mainleft">
+
+			<div class="l">
+
+				{% for one in commentl %}
+		<div class="left">
+			
+		<p class="coment">
+			<img src="{{static_url(one.rel)}}" alt="Rotten">
+			<q>{{one.content}}</q>
+		</p>
+
+        <p>
+			<img src="{{ static_url("images/critic.gif") }}" alt="{{ one.cla }}" />
+			{{ one.name }} <br/>
+			<span class="sourse">{{ one.origin }}</span>
+		</p>
+		
+		</div>
+		{% end for %}
+	</div>
+
+
+		<div class="r">
+			{% for one in commentr %}
+		<div class="right">
+			
+		<p class="coment">
+			<img src="{{static_url(one.rel)}}" alt="Rotten" />
+			<q>{{ one.content }}</q>
+		</p>
+
+		<p>
+			<img src="{{static_url("images/critic.gif")}}" alt="{{one.cla}}" />
+			{{ one.name }}<br/>
+			<span class="sourse">{{ one.origin }}</span>
+		</p>
+		
+	    </div>
+	    {% end for %}
+		</div>
+	</div>
+	<p id="end">(1-8) of {{movie.number}}</p>
+	</div>
+
+	<div class="w3c">
+        <a href="/?movie=tmnt">
+            <button>tmnt</button>
+        </a>
+        <br>
+        <a href="/?movie=tmnt2">
+            <button>tmnt2</button>
+        </a>
+        <br>
+        <a href="/?movie=princessbride">
+            <button>princessbride</button>
+        </a>
+        <br>
+        <a href="/?movie=mortalkombat">
+            <button>mortalkombat</button>
+        </a>
+        <br>
+        <a href="http://validator.w3.org/">
+            <img src="http://www.w3.org/Icons/valid-xhtml11" alt="html">
+        </a>
+        <br>
+        <a href="http://jigsaw.w3.org/css-validator/">
+            <img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="cssc">
+        </a>
+    </div>
+</body>
+</html>
