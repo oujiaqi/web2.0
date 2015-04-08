@@ -1,0 +1,165 @@
+.main-left-container-journey {
+	float: left;
+	width: 180px;
+	min-height: 300px;
+	border-right: 1px #eee solid;
+}
+
+.article-guide strong {
+	font-size: 18px;
+}
+
+.details-class li {
+	padding-left: 14px;
+}
+
+.left-article h1 {
+	border-bottom: 1px #eee solid;
+	font-size: 24px;
+	margin-bottom: 7px;
+}
+
+.left-article h2 {
+	font-size: 17px;
+	padding-bottom: 5px;
+	font-weight: normal;
+	font-style: italic;
+}
+
+.main-right {
+	float: left;
+	width: 767px;
+	margin-left: 30px;
+}
+
+.left-article {
+	margin-bottom: 20px;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 10px;
+	overflow: hidden;
+}
+
+.article-info {
+	float: right;
+	font-size: 11pt;
+	margin-top: 10px;
+}
+
+.article-info span {
+	font-family: icon-font;
+	font-size: 10px;
+}
+
+.article-info a {
+	margin-right: 4px;
+}
+
+.write-date {
+	font-size: 17px;
+	font-weight: normal;
+	margin-left: 3px;
+}
+
+.comments {
+	width: 770px;
+	overflow: hidden;
+}
+
+.comments h1 {
+	margin-bottom: 10px;
+}
+
+.comment-area textarea {
+	padding: 7px;
+	font-size: 11px;
+	line-height: 150%;
+}
+
+.comment-area button {
+	margin-left: 680px;
+	margin-bottom: 0px;
+	padding: 5px;
+	height: 32px;
+	color: #FFF;
+	width: 80px;
+	background-color: #4F4F4F;
+	border: none;
+	border-radius: 40px;
+	cursor: pointer;
+}
+
+.comment-area button:hover {
+	background-color: rgb(118, 164, 209);
+}
+
+.touxiang {
+	float: left;
+	width: 80px;
+	height: 60px;
+	text-align: center;
+	font-size: 12px;
+	color: #FF703F;
+	font-weight: bold;
+}
+
+.touxiang img {
+	border-radius: 50px;
+	width: 40px;
+	height: 40px;
+}
+
+.neirong {
+	width: 685px;
+	float: left;
+	font-size: 14px;
+}
+
+.neirong strong {
+	font-size: 15px;
+}
+
+.chaozuo {
+	float: right;
+	clear: both;
+	font-size: 12px;
+	color: #808080;
+}
+
+.chaozuo button {
+	color: #808080;
+	border: none;
+	background-color: white;
+	margin-left: 14px;
+}
+
+.digest {
+	height: 35px;
+	overflow: hidden;
+}
+
+.article-link {
+	float: right;
+	color: #075DB3;
+	margin-bottom: -7px;
+}
+
+.each-comment {
+	overflow: hidden;
+	padding-bottom: 15px;
+	padding-top: 20px;
+	margin-bottom: 10px;
+	border-top: 1px solid #eee;
+}
+
+.small {
+	visibility: hidden;
+}
+
+.choise {
+	margin: 10px;
+}
+
+.next-last {
+	padding-top: 7px;
+	text-align: center;
+}

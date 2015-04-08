@@ -1,0 +1,26 @@
+.date {
+	padding-left: 60px;
+}
+
+.show-area {
+	overflow: hidden;
+	width: 950px;
+	height: 350px;
+	border: solid 1px #eee;
+	background-image: url("/static/images/ou.jpg");
+	padding: 10px;
+}
+
+#big {
+	text-align: center;
+}
+
+.antistop {
+	display: inline;
+	position: relative;
+	color: purple;
+	transition: 2s;
+	-moz-transition: 2s;	/* Firefox 4 */
+	-webkit-transition: 5s;	/* Safari 和 Chrome */
+	-o-transition: 2s;	/* Opera */
+}

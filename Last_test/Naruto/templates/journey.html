@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="{{ static_url("css/index.css") }}" type="text/css" media="screen and (min-width: 700px)">
+	<link rel="stylesheet" href="{{ static_url("css/journey.css") }}" media="screen and (min-width: 700px)">
+	<link rel="stylesheet" href="{{ static_url("css/littleindex.css") }}" type="text/css" media="screen and (max-width: 699px)">
+	<link rel="stylesheet" href="{{ static_url("css/littlejourney.css") }}" type="text/css" media="screen and (max-width: 699px)">
+	<link rel="shortcut icon" href="../static/images/header-icon1.png">
+	<script src="{{ static_url("javascript/journey.js") }}" type="text/javascript"></script>
+	<title>Naruto's blog</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div class="header-content">
+				<div class="header-logo">
+					<a href="/">
+					<img src="{{ static_url("images/header-icon3.png") }}" alt="Naruto" id="header-icon">
+				    </a>
+				</div>
+				<!-- end logo-->
+				
+				<div class="site-search">
+					<input type="text" placeholder="Search Naruto's Blog" id="searchkey">
+					<a href="javascript:search();" class="header-find-button">
+						<span id="header-find-button">f</span>
+					</a>
+				</div>
+				<!-- end search-->
+				<div class="header-guide">
+					<ul class="header-guide-ul">
+						<li class="header-guide-li"><a href="/journey">Journey</a></li>
+						<li class="header-guide-li"><a href="#">Books</a></li>
+						<li class="header-guide-li"><a href="http://fifteencorner.sinaapp.com/">Programs</a></li>
+						<li class="header-guide-li"><a href="/wall">Wall</a></li>
+					</ul>
+				</div>
+				<!-- end header guide-->
+				<div class="header-profile">
+					<a href="/" id="imlink">
+						<img src="{{ static_url("images/naruto.jpg") }}" alt="naruto" id="headportrait">
+						<span class="header-right">Naruto</span>
+					</a>
+					<a href="#">
+						<span class="header-right header-view-sum">
+						Love - 240
+					    </span>
+					</a>
+				</div>
+				<!-- end header profile-->
+			</div>
+		</div>
+		<!-- /.header-->
+
+		<div class="main">
+			<div class="main-left hidden">
+				<div class="main-left-container-journey">
+					<div class="article-guide">
+						<h1>Journey</h1>
+						<ol>
+							<li>
+								<strong><a href="/journey">Time Order</a></strong>
+								<ul class="details-class">
+									{% for one in articles %}
+									<li><a href="{{ "?visit="+one.Visit }}">{{ one.Title }}</a></li>
+									{% end for %}
+								</ul>
+							</li>
+							<li>
+								<strong><a href="/journey">Category</a></strong>
+								<ul class="details-class">
+									<li><a href="/journey">Study</a></li>
+									<li><a href="/journey">Fun</a></li>
+								</ul>
+							</li>
+						</ol>
+					</div>
+					
+				</div>
+			</div>
+			<!-- end main left guide -->
+			<div class="main-right">
+				{% if judge == False %}
+				    {% for onearticle in articles %}
+				<div class="main-right-container-journey">
+					<div class="left-article digest-container">
+						<div class="article-info">
+							<a href="#" title="评论数"><span>s</span>{{ onearticle.Comment }}</a>
+							<a href="#" title="点赞数"><span>y</span>{{ onearticle.Love }}</a>
+							<strong class="write-date">
+								{{ onearticle.Sdate }}
+							</strong>
+						</div>
+						<h1>{{ onearticle.Title }}</h1>
+						<h2>{{ onearticle.Stitle }}</h2>
+						<div class="digest">
+						{% for one in onearticle.Content %}
+					        <p>{{ one }}</p>
+						{% end for %}
+						</div>
+
+						<a href="{{ "?visit="+onearticle.Visit }}" class="article-link">
+							阅读全文
+						</a>
+					</div>
+				</div>
+				    {% end for %}
+				{% end if %}
+
+				{% if judge %}
+				<div class="main-right-container-journey">
+					<div class="left-article">
+						<div class="article-info">
+							<a href="#comments-list" title="评论"><span>s</span>{{ article.Comment }}</a>
+							<a href="javascript:bigger();postwith('/journey', { 'love':'love', 'visit': {{ visit }} });" title="点赞" id="LOVE"><span>y</span>{{ article.Love }}</a>
+							<strong class="write-date">
+								{{ article.Sdate }}
+							</strong>
+						</div>
+						<h1>{{ article.Title }}</h1>
+						<h2>{{ article.Stitle }}</h2>
+						{% for one in article.Content %}
+						<p>{{ one }}</p>
+						{% end for %}
+						<p class="next-last">
+							{% if last != "#" %}
+					        <a href="{{ "?visit="+last }}" class="choise">Last</a>
+					        {% end if %}
+					        {% if next != "#" %}
+					        <a href="{{ "?visit="+next }}" class="choise">Next</a>
+					        {% end if %}
+						</p>
+						
+					</div>
+					<div class="comments" id="comments-list">
+						<h1>Comments</h1>
+						{% for comment in comments %}
+						<div class="each-comment">
+							<div class="touxiang">
+							    <img src="{{ static_url("images/"+comment.Picture) }}" alt="touxiang">
+							    <p>{{ comment.Name }}</p>
+						    </div>
+						    <div class="neirong">
+						    	<strong>#{{ comment.Class }}#：</strong>{{ comment.Content }}
+						    </div>
+					    	<div class="chaozuo">
+						    	<span class="date">{{ comment.Date }}</span>
+						    </div>
+						</div>
+						{% end for %}
+
+					</div>
+					<div class="comment-area" id="comment-id">
+						<form action="/journey" method="post">
+							<p><span class="card-icon">s</span>发表评论</p>
+						    <textarea name="comment" id="comment-text" cols="105" rows="5" placeholder="Write Your Comments"></textarea>
+						    <button id="comment-button" type="submit">发表评论</button>
+						    <input type="text" name="love" class="small hidden" id="love">
+							<input type="text" name="visit" value="{{ visit }}" class="small hidden">
+						</form>
+					</div>
+				</div>
+				{% end if %}
+			</div>
+			<!-- end main right article-->
+		</div>
+		<!-- /.main-->
+
+		<div class="footer">
+			<p>© Naruto Blog</p>
+			<p>2014-2015</p>
+		</div>
+		<!-- /.footor-->
+	</div>
+	<!-- /.wrapper -->
+</body>
+</html>

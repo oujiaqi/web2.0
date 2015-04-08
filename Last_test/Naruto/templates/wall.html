@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="{{ static_url("css/index.css") }}" type="text/css" media="screen and (min-width: 700px)">
+	<link rel="stylesheet" href="{{ static_url("css/journey.css") }}" media="screen and (min-width: 700px)">
+	<link rel="stylesheet" href="{{ static_url("css/wall.css") }}" media="screen and (min-width: 700px)">
+	<link rel="stylesheet" href="{{ static_url("css/littleindex.css") }}" type="text/css" media="screen and (max-width: 699px)">
+	<link rel="stylesheet" href="{{ static_url("css/littlejourney.css") }}" type="text/css" media="screen and (max-width: 699px)">
+	<link rel="stylesheet" href="{{ static_url("css/littlewall.css") }}" type="text/css" media="screen and (max-width: 699px)">
+	<link rel="shortcut icon" href="../static/images/header-icon1.png">
+	<script src="{{ static_url("javascript/wall.js") }}" type="text/javascript"></script>
+	<title>Naruto's blog</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div class="header-content">
+				<div class="header-logo">
+					<a href="/">
+					<img src="{{ static_url("images/header-icon3.png") }}" alt="Naruto" id="header-icon">
+				    </a>
+				</div>
+				<!-- end logo-->
+				
+				<div class="site-search">
+					<input type="text" placeholder="Search Naruto's Blog" id="searchkey">
+					<a href="javascript: search()" class="header-find-button">
+						<span id="header-find-button">f</span>
+					</a>
+				</div>
+				<!-- end search-->
+				<div class="header-guide">
+					<ul class="header-guide-ul">
+						<li class="header-guide-li"><a href="/journey">Journey</a></li>
+						<li class="header-guide-li"><a href="#">Books</a></li>
+						<li class="header-guide-li"><a href="http://fifteencorner.sinaapp.com/">Programs</a></li>
+						<li class="header-guide-li"><a href="/wall">Wall</a></li>
+					</ul>
+				</div>
+				<!-- end header guide-->
+				<div class="header-profile">
+					<a href="/" id="imlink">
+						<img src="{{ static_url("images/naruto.jpg") }}" alt="naruto" id="headportrait">
+						<span class="header-right">Naruto</span>
+					</a>
+					<a href="#">
+						<span class="header-right header-view-sum">
+						Love - 240
+					    </span>
+					</a>
+				</div>
+				<!-- end header profile-->
+			</div>
+		</div>
+		<!-- /.header-->
+
+		<div class="main">
+			<h1 id="big">Message Wall</h1>
+			<div class="show-area" id="antistops">
+				{% for one in impression %}
+				<div class="antistop">{{ one }}</div>
+				{% end for %}
+			</div>
+			<div class="comment-area">
+				<form action="/wall" method="post">
+					<p><span class="card-icon">s</span>说出你的爱（#内容#里面的将会出现在印象墙上）</p>
+			    	<textarea name="comment" id="comment-text" cols="105" rows="5" placeholder="Write Down Your Love"></textarea>
+				    <button id="comment-button" typr="submit">发表</button>
+				</form>
+			</div>
+			<div class="comments">
+				<h1>Love</h1>
+				{% for one in message %}
+				<div class="each-comment">
+					<div class="touxiang">
+					    <img src="{{ static_url("images/"+one.Picture) }}" alt="">
+					    <p>{{ one.Name }}</p>
+				    </div>
+				    <div class="neirong">
+				    	<strong>#{{ one.Class }}#：</strong>
+				    	{{ one.Content }}
+				    </div>
+				    <div class="chaozuo">
+					    <span class="date">{{ one.Date }}</span>
+					</div>
+				</div>
+				{% end for %}
+			</div>
+		</div>
+		<!-- /.main-->
+
+		<div class="footer">
+			<p>© Naruto Blog</p>
+			<p>2014-2015</p>
+		</div>
+		<!-- /.footor-->
+	</div>
+	<!-- /.wrapper -->
+</body>
+</html>

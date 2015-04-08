@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pimp My Text!</title>
+        <link href="pimpmytext.css" rel="stylesheet" type="text/css" />
+
+        <!--
+            This is a widely-used JavaScript "library" with many useful functions,
+            including the $() function, which we need. We'll discuss it in class.
+            Please don't remove this link or change the following URL; leave it as-is!
+        -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="pimpmytext.js"></script>
+
+        <!-- link to your script file here -->
+
+    </head>
+
+    <body id="body">
+        <h1>Pimp My Text</h1>
+        <div>
+            <img src="pimpin.jpg" alt="Marty Stepp, pimpin' it!" />
+        </div>
+
+        <!-- Your UI controls go here -->
+        <fieldset>
+            <legend>Text</legend>
+            <textarea id="text" cols="20" rows="4"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Pimpification</legend>
+            <input type="button" value="Bigger Pimpin!" id="bigger">
+            <br/>
+            <label for="">
+                <input type="checkbox" id="bling"> Bling
+            </label>
+            <br/>
+            <br/>
+            <input type="button" value="Snoopify" id="snoopify">
+            <input type="button" value="Malkovitch" id="malkovitch">
+            <input type="button" value="Igpay Atinlay" id="igpay atinlay">
+            <br/>
+            <br/>
+            <input type="button" value="Empty" id="empty">
+        </fieldset>
+
+    </body>
+</html>

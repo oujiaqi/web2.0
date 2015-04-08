@@ -1,0 +1,209 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+}
+
+body {
+	background-image: url("/static/images/body-bg.jpg");
+}
+
+li {
+	list-style-type: none;
+}
+
+@font-face {
+	font-family: icon-font;
+	src: url("fonts/wbficon.woff");
+}
+
+@font-face {
+	font-family: icon-correspond;
+	src: url("fonts/swbficon.woff");
+}
+
+a {
+	font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
+	text-decoration: none;
+	color: #551A8B;
+}
+
+.header-content {
+	background-image: url("/static/images/header-bg.jpg");
+	background-position: center;
+	height: 150px;
+	width: 100%;
+	overflow: visible;
+}
+
+#header-icon, .site-search, .header-view-sum, .hidden {
+	visibility: hidden;
+}
+
+#headportrait {
+	width: 60px;
+	height: 60px;
+	border-radius: 50px;
+	display: block;
+}
+
+.header-right {
+	font-weight: bold;
+	text-align: none;
+	color: #9DDCFF;
+}
+
+.header-profile {
+	position: absolute;
+	left: 42%;
+	top: 30px;
+	font-size: 24px;
+	width: 80px;
+}
+
+.header-guide-li {
+	font-size: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	float: left;
+	width: 25%;
+	text-align: center;
+	background-color: #9DDCFF;
+	position: relative;
+	top: 65px;
+	color: #2879D0;
+	font-weight: bold;
+	list-style-type: none;
+}
+
+.header-guide-ul li:active {
+	background-color: white;
+	opacity: 0.5;
+}
+
+.card-pic {
+	width: 10px;
+	height: 10px;
+}
+
+.pro-state img {
+	width: 10px;
+	height: 10px;
+}
+
+.card-icon {
+	font-family: icon-font;
+	color: #666666;
+	font-size: 14pt;
+	margin-right: 8px;
+}
+
+.main-left-container {
+	padding: 5%;
+}
+
+.main-left-container h1 {
+	margin-bottom: 10px;
+}
+
+.card-full-name {
+	font-weight: bold;
+	display: block;
+	font-size: 30px;
+	text-align: center;
+}
+
+.card-name-attached {
+	font-size: 24px;
+	display: block;
+	text-align: center;
+	font-weight: normal;
+	color: #666666;
+	margin-top: -10px;
+}
+
+.info-ul {
+	font-size: 17px;
+	border: 1px solid #eee;
+	background-color: white;
+	padding: 14px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.motto {
+	padding-top: 14px;
+	font-size: 14px;
+	text-align: center;
+	color: #6E6969;
+}
+
+.huoying {
+	color: #FF703F;
+	font-size: 17px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.main-right {
+	padding: 4%;
+}
+
+.pro-state {
+	font-size: 15px;
+	border: 1px solid #eee;
+	background-color: white;
+	padding: 14px;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	margin-bottom: 10px;
+	margin-top: -27px;
+	line-height: 1.4;
+	color: #551A8B;
+}
+
+.pro-state strong {
+	font-family: icon-font;
+	font-size: 17pt;
+	float: left;
+	padding-right: 7px;
+}
+
+.pic-class-container div {
+	width: 48%;
+	height: 100px;
+	margin-bottom: 40px;
+}
+
+.pic-class-first, .pic-class-third {
+	float: left;
+}
+
+.pic-class-second, .pic-class-forth {
+	float: right;
+}
+
+.pic-class-container img {
+	width: 100%;
+	height: 100%;
+	z-index:-1000;
+	opacity: 0.8;
+	transition: 0.3s all;
+	-moz-transition: 0.3s all;	/* Firefox 4 */
+	-webkit-transition: 0.3s all;	/* Safari 和 Chrome */
+	-o-transition: 0.3s all;
+}
+
+.pic-class-container h1 {
+	font-size: 13px;
+	text-align: center;
+}
+
+.footer {
+	margin: 4%;
+	padding-top: 15px;
+	clear: both;
+	border-top: 1px solid #eee;
+	font-size: 14px;
+	text-align: center;
+}
